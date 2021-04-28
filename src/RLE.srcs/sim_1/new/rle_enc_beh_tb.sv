@@ -17,7 +17,7 @@ logic [5:0] i=0;
 int arctan[0:23] = { 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hbb, 8'hbb,  8'hbb, 8'hbb,  8'hbc, 8'hbd};
 
 // Instantiate the module
-rle_encoder_beh UUT ( .clk(clk), .rst(rst), .stream_in(input_stream), .compressed_stream(output_stream), .valid(valid) );
+rle_encoder_beh #(.DATA_WIDTH(8),.CTR_WIDTH(4)) UUT ( .clk(clk), .rst(rst), .stream_in(input_stream), .compressed_stream(output_stream), .valid(valid) );
 
 initial begin
     rst = 1'b0;
@@ -37,6 +37,6 @@ always@(posedge clk) begin
     input_stream = arctan[i];
     i <= (i == 23) ? 0 : i + 1;  
     if (valid)
-        $display("ctr=%d, sequence=%x", output_stream[11:8], output_stream[7:0]); 
+        $display("ctr=%d (in fact=S%d), sequence = 0x%x", output_stream[11:8], (output_stream[11:8]+1), output_stream[7:0]); 
 end
 endmodule

@@ -7,7 +7,7 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.rle_encoder_beh
+Compiling module xil_defaultlib.rle_encoder_beh_default
 Compiling module xil_defaultlib.rle_enc_beh_tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot rle_enc_beh_tb_behav
