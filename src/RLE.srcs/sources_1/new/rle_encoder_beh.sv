@@ -23,8 +23,14 @@ begin
         compressed_stream <= 12'b0;
     end else begin
         if (stream_in == stream_in_prev) begin
-            valid <= 1'b0;
-            seq_counter <= seq_counter + 1;
+            if (seq_counter != 15) begin
+                valid <= 1'b0;
+                seq_counter <= seq_counter + 1;
+            end else begin
+                valid <= 1'b1;
+                compressed_stream <= {seq_counter[3:0], stream_in_prev};
+                seq_counter <= 0;
+            end
         end else begin
             valid <= 1'b1;
             compressed_stream <= {seq_counter[3:0], stream_in_prev};
