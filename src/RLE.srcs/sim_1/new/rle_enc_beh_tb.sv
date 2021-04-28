@@ -14,6 +14,7 @@ logic [11:0] output_stream;
 logic [5:0] i=0;
 
 int arctan[0:23] = { 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'h55, 8'h55, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hbb, 8'hbb,  8'hbb, 8'hbb,  8'hbc, 8'hbd};
+//int arctan[0:23] = { 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hA5, 8'hbb, 8'hbb,  8'hbb, 8'hbb,  8'hbc, 8'hbd};
 
 // Instantiate the module
 rle_encoder_beh UUT ( .clk(clk), .rst(rst), .stream_in(input_stream), .compressed_stream(output_stream), .valid(valid) );
