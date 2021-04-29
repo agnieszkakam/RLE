@@ -22,9 +22,7 @@ reg [DATA_WIDTH-1:0] stream_in_prev;
 reg [CTR_WIDTH:0] seq_counter = 0;
     
 initial begin
-    $display("CTR MAX=%d", CTR_MAX);
-    $display("DATA WIDTH=%d", DATA_WIDTH);
-    $display("CTR WIDTH=%d", CTR_WIDTH);
+    $display("CTR MAX=%d, DATA WIDTH=%d, CTR WIDTH=%d", CTR_MAX, DATA_WIDTH, CTR_WIDTH);
 end
     
 always @(posedge clk)    

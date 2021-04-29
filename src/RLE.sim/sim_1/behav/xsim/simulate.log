@@ -1,25 +1,21 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
-CTR MAX=         15
+CTR MAX=         63
 DATA WIDTH=          8
-CTR WIDTH=          4
-ctr=15 (in fact=S        16), sequence = 0xa5
-ctr= 1 (in fact=S         2), sequence = 0xa5
-ctr= 3 (in fact=S         4), sequence = 0xbb
-ctr= 0 (in fact=S         1), sequence = 0xbc
-ctr= 0 (in fact=S         1), sequence = 0xbd
-ctr=15 (in fact=S        16), sequence = 0xa5
-ctr= 1 (in fact=S         2), sequence = 0xa5
-ctr= 3 (in fact=S         4), sequence = 0xbb
-ctr= 0 (in fact=S         1), sequence = 0xbc
-ctr= 0 (in fact=S         1), sequence = 0xbd
-ctr=15 (in fact=S        16), sequence = 0xa5
-ctr= 1 (in fact=S         2), sequence = 0xa5
-ctr= 3 (in fact=S         4), sequence = 0xbb
-ctr= 0 (in fact=S         1), sequence = 0xbc
-ctr= 0 (in fact=S         1), sequence = 0xbd
-ctr=15 (in fact=S        16), sequence = 0xa5
-ctr= 1 (in fact=S         2), sequence = 0xa5
-ctr= 3 (in fact=S         4), sequence = 0xbb
-ctr= 0 (in fact=S         1), sequence = 0xbc
-ctr= 0 (in fact=S         1), sequence = 0xbd
+CTR WIDTH=          6
+ctr=17 (in fact=        18), sequence = 0xa5
+ctr= 3 (in fact=         4), sequence = 0xbb
+ctr= 0 (in fact=         1), sequence = 0xbc
+ctr= 0 (in fact=         1), sequence = 0xbd
+ctr=17 (in fact=        18), sequence = 0xa5
+ctr= 3 (in fact=         4), sequence = 0xbb
+ctr= 0 (in fact=         1), sequence = 0xbc
+ctr= 0 (in fact=         1), sequence = 0xbd
+ctr=17 (in fact=        18), sequence = 0xa5
+ctr= 3 (in fact=         4), sequence = 0xbb
+ctr= 0 (in fact=         1), sequence = 0xbc
+ctr= 0 (in fact=         1), sequence = 0xbd
+ctr=17 (in fact=        18), sequence = 0xa5
+ctr= 3 (in fact=         4), sequence = 0xbb
+ctr= 0 (in fact=         1), sequence = 0xbc
+ctr= 0 (in fact=         1), sequence = 0xbd
