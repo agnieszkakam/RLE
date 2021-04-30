@@ -26,12 +26,12 @@ logic clk;
 logic rst;
 logic [13:0] compressed_stream_in;
 logic [7:0] initial_stream;
-logic valid;
 logic [3:0] i = 0;
+logic rd_flag;
 
 int input_tab[0:7] = { 14'h11a5, 14'h03bb, 14'h00bc, 14'h00bd, 14'h11a5, 14'h04bb, 14'h00bc, 14'h00bd };
 
-rle_decoder_beh my_dec ( .clk(clk), .rst(rst), .compressed_stream_in(compressed_stream_in), .initial_stream(initial_stream), .valid(valid) );
+rle_decoder_beh my_dec ( .clk(clk), .rst(rst), .compressed_stream_in(compressed_stream_in), .initial_stream(initial_stream), .rd_flag(rd_flag) );
 
 initial begin
     rst = 1'b0;
@@ -49,9 +49,11 @@ end
 
 always@(posedge clk) begin
     compressed_stream_in = input_tab[i];
-    i <= (i == 8) ? 0 : i + 1;  
-    if (valid)
-        $display("compressed_stream_in=%d, initial_stream=%d", compressed_stream_in, initial_stream); 
+    if (rd_flag) begin
+    $display("rd_flag is 1");
+        i = i + 1;
+    end
+    $display("compressed_stream_in=%h, initial_stream=%h", compressed_stream_in, initial_stream); 
 end
 
 endmodule

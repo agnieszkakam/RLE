@@ -26,34 +26,41 @@ module rle_decoder_beh
     input rst,
     input [13:0] compressed_stream_in,   // 6 bitow na licznik, 8 bitow na dane  
     output reg [7:0] initial_stream,     // 8 bitow danych
-    output reg valid
+    output reg rd_flag
 );
 
-integer i, idx;
-reg [7:0] curr_val;
-reg [7:0] seq_counter = 0;
+integer i;
+//reg rd_flag;
+reg [7:0] curr_word;
+reg [5:0] curr_count;
 
 //11a5, 03bb, 00bc, 00bd, 11a5, 04bb, 00bc, 00bd
 
 always @(posedge clk) begin
     if (!rst) begin
         initial_stream <= 8'b00000000;
-        curr_val <= 14'b00000000000000;
-        valid <= 1'b0;
-        idx <= 0;
+        curr_word <= 14'b00000000000000;
+        curr_count <= 6'b000000;
+        i <= 0;
+        rd_flag <= 0;
     end
     else begin
-        if (compressed_stream_in[13:8] == 0) begin
-            curr_val <= compressed_stream_in[7:0];
-            initial_stream <= curr_val;
+        curr_word <= compressed_stream_in[7:0];
+        curr_count <= compressed_stream_in[13:8];
+        if (curr_count == 6'b000000) begin
+            initial_stream <= curr_word;
+            rd_flag <= 1;
         end
         else begin
-            curr_val <= compressed_stream_in[7:0];
-            for ( i = 0; i < compressed_stream_in[13:8] + 2; i = i + 1) begin
-                initial_stream <= curr_val[7:0];
+            curr_word <= compressed_stream_in[7:0];
+            for ( i = 0; i < curr_count + 2; i = i + 1) begin
+                $display("loop is working, i is %d", i);
+                initial_stream <= curr_word;
             end
-        i <= 0;
+            rd_flag <= 1;
         end
+        i <= 0;
+        rd_flag <= 0;
     end
 end
 
