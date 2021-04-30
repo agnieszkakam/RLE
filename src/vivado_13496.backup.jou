@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Apr 30 10:17:38 2021
+# Process ID: 13496
+# Current directory: D:/MadziaPliki/SDUP/RLE_repo/RLE/src
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6844 D:\MadziaPliki\SDUP\RLE_repo\RLE\src\RLE.xpr
+# Log file: D:/MadziaPliki/SDUP/RLE_repo/RLE/src/vivado.log
+# Journal file: D:/MadziaPliki/SDUP/RLE_repo/RLE/src\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.xpr
+update_compile_order -fileset sources_1
+close [ open D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.srcs/sources_1/new/rle_decoder_beh.v w ]
+add_files D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.srcs/sources_1/new/rle_decoder_beh.v
+update_compile_order -fileset sources_1
+launch_simulation

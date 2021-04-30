@@ -1,21 +1,2 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
-CTR MAX=         63
-DATA WIDTH=          8
-CTR WIDTH=          6
-ctr=17 (in fact=        18), sequence = 0xa5
-ctr= 3 (in fact=         4), sequence = 0xbb
-ctr= 0 (in fact=         1), sequence = 0xbc
-ctr= 0 (in fact=         1), sequence = 0xbd
-ctr=17 (in fact=        18), sequence = 0xa5
-ctr= 3 (in fact=         4), sequence = 0xbb
-ctr= 0 (in fact=         1), sequence = 0xbc
-ctr= 0 (in fact=         1), sequence = 0xbd
-ctr=17 (in fact=        18), sequence = 0xa5
-ctr= 3 (in fact=         4), sequence = 0xbb
-ctr= 0 (in fact=         1), sequence = 0xbc
-ctr= 0 (in fact=         1), sequence = 0xbd
-ctr=17 (in fact=        18), sequence = 0xa5
-ctr= 3 (in fact=         4), sequence = 0xbb
-ctr= 0 (in fact=         1), sequence = 0xbc
-ctr= 0 (in fact=         1), sequence = 0xbd
