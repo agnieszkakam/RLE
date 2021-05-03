@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.sim/sim_1/behav/xsim/xsim.dir/rle_dec_beh_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Mon May  3 17:57:47 2021" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Mon May  3 19:35:12 2021" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "6684e19e-be1d-49ed-97d8-37a5c534620b" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "2308d4295dca4317a75af360ea7c31ae" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "42" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "44" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz" -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "17.000 GB" -context "us
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "1400 ns" -context "xsim\\usage"
+webtalk_add_data -client xsim -key runtime -value "1 us" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.01_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "6364_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1124989397 -regid "" -xml D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.sim/sim_1/behav/xsim/xsim.dir/rle_dec_beh_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.sim/sim_1/behav/xsim/xsim.dir/rle_dec_beh_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.sim/sim_1/behav/xsim/xsim.dir/rle_dec_beh_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.09_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "6416_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3949134100 -regid "" -xml D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.sim/sim_1/behav/xsim/xsim.dir/rle_dec_beh_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.sim/sim_1/behav/xsim/xsim.dir/rle_dec_beh_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.sim/sim_1/behav/xsim/xsim.dir/rle_dec_beh_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

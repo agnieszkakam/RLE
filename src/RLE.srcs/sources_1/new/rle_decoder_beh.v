@@ -24,30 +24,30 @@ module rle_decoder_beh
 (
     input clk,
     input rst,
-    input [13:0] compressed_stream_in,   // 6 bitow na licznik, 8 bitow na dane  
-    output reg [7:0] initial_stream,     // 8 bitow danych
-    output reg [5:0] curr_count,
+    input [DATA_WIDTH + CTR_WIDTH - 1:0] compressed_stream_in, 
+    output reg [DATA_WIDTH - 1:0] initial_stream,
+    output reg [CTR_WIDTH - 1:0] curr_count,
     output reg rd_flag
 );
 
-reg [7:0] curr_word;
-//reg [5:0] curr_count;
+parameter DATA_WIDTH=8,
+          CTR_WIDTH=6;
 
-//11a5, 03bb, 00bc, 00bd, 11a5, 04bb, 00bc, 00bd
+reg [7:0] curr_word;
 
 always @(posedge clk) begin
     if (!rst) begin
-        initial_stream <= 8'b00000000;
-        curr_word <= 8'b00000000;
-        curr_count <= 6'b000000;
+        initial_stream <= 0;
+        curr_word <= 0;
+        curr_count <= 0;
     end
     else begin
         if (rd_flag == 1'b0) begin
-        curr_count <= compressed_stream_in[13:8] + 1'b1;
-        curr_word <= compressed_stream_in[7:0];
+        curr_count <= compressed_stream_in[DATA_WIDTH + CTR_WIDTH - 1:DATA_WIDTH] + 1'b1;
+        curr_word <= compressed_stream_in[DATA_WIDTH - 1:0];
         rd_flag <= 1;
         end
-        if (curr_count == 6'b000000) begin
+        if (curr_count == 0) begin
             rd_flag <= 0;
         end
         else begin

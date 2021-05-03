@@ -1,7 +1,7 @@
-Running: xsim.dir/rle_dec_beh_tb_behav/xsimk.exe -simmode gui -wdb rle_dec_beh_tb_behav.wdb -simrunnum 0 -socket 50247
+Running: xsim.dir/rle_dec_beh_tb_behav/xsimk.exe -simmode gui -wdb rle_dec_beh_tb_behav.wdb -simrunnum 0 -socket 50622
 Design successfully loaded
-Design Loading Memory Usage: 5728 KB (Peak: 5728 KB)
+Design Loading Memory Usage: 5784 KB (Peak: 5784 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 6364 KB (Peak: 6364 KB)
-Simulation CPU Usage: 15 ms
+Simulation Memory Usage: 6416 KB (Peak: 6416 KB)
+Simulation CPU Usage: 93 ms
