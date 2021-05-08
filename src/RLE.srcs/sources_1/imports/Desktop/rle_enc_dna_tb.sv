@@ -22,12 +22,10 @@ int dna_seq[0:SEQ_LEN-1] = {  8'h67, 8'h74, 8'h63, 8'h61, 8'h63, 8'h67, 8'h67, 8
 int valid_ctr = 0;
 
 // Instantiate the module
-//rle_encoder_beh #(.DATA_WIDTH(8),.CTR_WIDTH(4)) UUT ( .clk(clk), .rst(rst), .stream_in(input_stream), .compressed_stream(output_stream), .valid(valid) );
 rle_encoder_dna#(.DATA_WIDTH(DATA_WIDTH),.CTR_WIDTH(CTR_WIDTH)) UUT ( .clk(clk), .rst(rst), .stream_in(input_stream), .compressed_stream(output_stream), .valid(valid) );
 
 initial begin
     rst = 1'b0;
-    //input_stream = 8'hA5;
     #10 rst = 1'b1;
 end
 
