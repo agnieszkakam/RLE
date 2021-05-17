@@ -1,24 +1,29 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////////
+// Company: AGH
+// Engineer: Agnieszka Kamien
+// 
+// Create Date: 07.05.2021 20:38:41
+// Design Name: RLE 
+// Module Name: top
+// 
+//////////////////////
+////////////////////////////////////////////////////////////
 
 module top(
     input wire clk,
-    input wire rst
+    input wire rst,
+    input wire [31:0] nucleotide_ASCII_package 
 );
 
 wire clk_400MHz;
 
-clk_wiz_0 clk_divider   (
+clk_wiz_1 clk_divider   (
     .clk_100MHz(clk),
-    .reset(rst),
-    .locked(),
     .clk_400MHz(clk_400MHz)
 );
 
-wire [31:0] nucleotide_ASCII_package;
 wire [7:0] nucleotide_ASCII_single;
 
 unpackager unpackager (

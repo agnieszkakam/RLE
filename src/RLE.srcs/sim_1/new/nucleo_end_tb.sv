@@ -1,5 +1,15 @@
 `timescale 1ns / 1ps
 
+//////////////////////////////////////////////////////////////////////////////////
+// Company: AGH
+// Engineer: Agnieszka Kamien
+// 
+// Create Date: 07.05.2021 22:38:41
+// Design Name: RLE 
+// Module Name: nucleo_enc_tb
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 module nucleo_enc_tb();
     
 logic clk; // Give simulation a tick. The module does not need this

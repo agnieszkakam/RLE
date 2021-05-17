@@ -1,27 +1,18 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: AGH
+// Engineer: Agnieszka Kamien
 // 
 // Create Date: 07.05.2021 17:00:50
-// Design Name: 
+// Design Name: RLE 
 // Module Name: unpackager
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
 module unpackager   (
-    input clk,      // ASCII clk: 100 MHz
-    input clk_400MHz,      // ASCII clk: 100 MHz
+    input clk,              
+    input clk_400MHz,     
     input rst,
     input [31:0] ASCII_package_in,
     output reg [7:0] ASCII_char

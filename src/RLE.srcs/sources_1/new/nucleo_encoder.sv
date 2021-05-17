@@ -1,21 +1,12 @@
 `timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: AGH
+// Engineer: Agnieszka Kamien
 // 
 // Create Date: 07.05.2021 10:32:03
-// Design Name: 
+// Design Name: RLE 
 // Module Name: nucleo_encoder
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -31,7 +22,7 @@ localparam a = 2'b00;
 localparam c = 2'b01;
 localparam g = 2'b10;
 localparam t = 2'b11;
-localparam unknown = 2'bzz;
+localparam invalid_code = 2'bzz;
 
 always @* begin
     if ( !rst ) begin
@@ -43,7 +34,7 @@ always @* begin
             8'h63: nucleotide_code = c;
             8'h67: nucleotide_code = g;
             8'h74: nucleotide_code = t;
-            default: nucleotide_code = unknown;
+            default: nucleotide_code = invalid_code;
         endcase
     end
 end
