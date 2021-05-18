@@ -21,7 +21,6 @@ module pkg2char_parser(
 reg [7:0] ASCII_char_nxt;
 reg [2:0] ctr = 0, ctr_nxt = 0;
 
-//int packets [0:3];
 
 always @(posedge clk_400MHz) begin
     if (!rst) begin
@@ -38,5 +37,6 @@ always @(posedge clk_400MHz) begin
         end
     end
 end
+
 
 endmodule

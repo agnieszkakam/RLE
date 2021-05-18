@@ -1,17 +1,48 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2308d4295dca4317a75af360ea7c31ae --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_noFIFO_tb_behav xil_defaultlib.top_noFIFO_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2308d4295dca4317a75af360ea7c31ae --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 3 for port 'output_stream' [C:/git/RLE/src/RLE.srcs/sim_1/new/top_noFIFO_tb.sv:26]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.pkg2char_parser
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package fifo_generator_v13_2_3.fifo_generator_v13_2_3_pkg
+Compiling package xpm.vcomponents
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=30.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_1_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_1
+Compiling architecture xilinx of entity fifo_generator_v13_2_3.reset_builtin [\reset_builtin(c_common_clock=0,...]
+Compiling architecture ff18_internal_vhdl_v of entity unisim.FF18_INTERNAL_VHDL [\FF18_INTERNAL_VHDL(almost_full_...]
+Compiling architecture fifo18e1_v of entity unisim.FIFO18E1 [\FIFO18E1(almost_full_offset="00...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_3.builtin_prim_v6 [\builtin_prim_v6(c_family="7SERI...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_3.builtin_extdepth_v6 [\builtin_extdepth_v6(c_family="7...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_3.builtin_top_v6 [\builtin_top_v6(c_family="7SERIE...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_3.input_blk [\input_blk(c_common_clock=0,c_di...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_3.output_blk [\output_blk(c_dout_width=32,c_pk...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_3.fifo_generator_v13_2_3_builtin [\fifo_generator_v13_2_3_builtin(...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_3.fifo_generator_top [\fifo_generator_top(c_family="vi...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_3.fifo_generator_v13_2_3_synth [\fifo_generator_v13_2_3_synth(c_...]
+Compiling module fifo_generator_v13_2_3.fifo_generator_v13_2_3(C_DATA_CO...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling module xil_defaultlib.unpackager
 Compiling module xil_defaultlib.nucleo_encoder
 Compiling module xil_defaultlib.rle_encoder_beh(DATA_WIDTH=2,CTR...
-Compiling module xil_defaultlib.top_noFIFO
-Compiling module xil_defaultlib.top_noFIFO_tb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.top_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot top_noFIFO_tb_behav
+Built simulation snapshot top_tb_behav

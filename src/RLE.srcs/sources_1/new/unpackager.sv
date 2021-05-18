@@ -52,7 +52,8 @@ always @* begin
         packets[1] = ASCII_package_out[23:16];
         packets[2] = ASCII_package_out[15:8];
         packets[3] = ASCII_package_out[7:0];
-        ctr = 0;
+        ASCII_char_nxt = packets[0];
+        ctr = 1;
     end
     else if (ctr < 4) begin
         ASCII_char_nxt = packets[ctr];
