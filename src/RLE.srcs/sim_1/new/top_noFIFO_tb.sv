@@ -17,9 +17,9 @@ logic clk_100MHz;       // Give simulation a tick. The module does not need this
 logic clk_400MHz;       // artificial clk400M generation
 logic rst, valid;
 logic [31:0] nucleotide_ASCII_package;
-logic [7:0] output_stream;
+logic [2:0] output_stream;
 
-int data_in[0:7] = { 32'h61636361, 32'h61746774, 32'h74616363, 32'h61636361, 32'h61636361, 32'h61746774, 32'h61646161, 32'h74746774 };
+int data_in[0:7] = { 32'h61636361, 32'h61746774, 32'h74616363, 32'h61636361, 32'h61636361, 32'h61746774, 32'h61636161, 32'h74746774 };
 int i = 0;
 
 // Instantiate the module

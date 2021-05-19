@@ -1,7 +1,64 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
 CTR MAX=          1, DATA WIDTH=          2, CTR WIDTH=          1
-$finish called at time : 340 ns : File "C:/git/RLE/src/RLE.srcs/sim_1/new/top_noFIFO_tb.sv" Line 52
-H = 36 C_RD_PRIM_DEPTH = 512 DEEP = 1 WIDE = 1
+Note: Actual FIFO Depth = 512
+Time: 0 ps  Iteration: 0
+Note:  DEPTH = 512 WIDTH = 36 C_RD_PRIM_WIDTH = 36 C_RD_PRIM_DEPTH = 512 DEEP = 1 WIDE = 1
 Time: 0 ps  Iteration: 0
 $finish called at time : 85 ns : File "C:/git/RLE/src/RLE.srcs/sim_1/new/top_tb.sv" Line 44
+IV
+stream_prev=zz, stream_in=00
+case IV
+stream_prev=00, stream_in=11
+case IV
+stream_prev=11, stream_in=10
+case IV
+stream_prev=10, stream_in=11
+case IV
+stream_prev=11, stream_in=11
+case III
+stream_prev=11, stream_in=00
+case IV
+stream_prev=00, stream_in=01
+case IV
+stream_prev=01, stream_in=01
+case III
+stream_prev=01, stream_in=00
+case IV
+stream_prev=00, stream_in=01
+case IV
+stream_prev=01, stream_in=01
+case III
+stream_prev=01, stream_in=00
+case IV
+stream_prev=00, stream_in=00
+case III
+stream_prev=00, stream_in=01
+case IV
+stream_prev=01, stream_in=01
+case III
+stream_prev=01, stream_in=00
+case IV
+stream_prev=00, stream_in=00
+case III
+stream_prev=00, stream_in=11
+case IV
+stream_prev=11, stream_in=10
+case IV
+stream_prev=10, stream_in=11
+case IV
+stream_prev=11, stream_in=00
+case IV
+stream_prev=00, stream_in=01
+case IV
+stream_prev=01, stream_in=00
+case IV
+stream_prev=00, stream_in=00
+case III
+stream_prev=00, stream_in=11
+case IV
+stream_prev=11, stream_in=11
+case III
+stream_prev=11, stream_in=10
+case IV
+$finish called at time : 340 ns : File "C:/git/RLE/src/RLE.srcs/sim_1/new/top_noFIFO_tb.sv" Line 52

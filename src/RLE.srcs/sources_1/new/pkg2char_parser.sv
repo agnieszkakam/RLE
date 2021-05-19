@@ -21,19 +21,23 @@ module pkg2char_parser(
 reg [7:0] ASCII_char_nxt;
 reg [2:0] ctr = 0, ctr_nxt = 0;
 
+reg [7:0] packets [0:2];
 
 always @(posedge clk_400MHz) begin
     if (!rst) begin
-        ASCII_char <= 8'b0;
-        ctr <= 3'd3;
+        ASCII_char <= 8'bxx;
+        ctr <= 3'd0;
     end
     else begin
         if ((clk_400MHz & clk) & (ctr == 3)) begin
-            ASCII_char <= ASCII_package_in [31:24];
-            ctr <= 2;
+            packets[2] <= ASCII_package_in[7:0];
+            packets[1] <= ASCII_package_in[15:8];
+            packets[0] <= ASCII_package_in[23:16];
+            ASCII_char <= ASCII_package_in[31:24];
+            ctr <= 0;
         end else if (ctr != 3) begin
-            ASCII_char <= ASCII_package_in [ ctr*8 +: 8];
-            ctr <= (ctr == 0)? 3 : ctr - 1;         
+            ASCII_char <= packets[ctr];
+            ctr <= ctr + 1;         
         end
     end
 end

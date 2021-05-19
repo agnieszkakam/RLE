@@ -26,7 +26,7 @@ localparam invalid_code = 2'bzz;
 
 always @* begin
     if ( !rst ) begin
-        nucleotide_code = 2'b00;
+        nucleotide_code = 2'bz;
     end
     else begin
         case( nucleotide_ASCII)

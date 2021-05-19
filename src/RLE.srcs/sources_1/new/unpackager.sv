@@ -32,32 +32,21 @@ fifo_generator_0 fifo   (
     .full(),
     .empty(empty_fifo)
 );
-reg [7:0] ASCII_char_nxt;
-reg [2:0] ctr = 0;
 
-int packets [0:3];
+reg [2:0] ctr = 0;
+reg [7:0] packets [0:2];
 
 always @(posedge clk_400MHz) begin
-    if (!rst) begin
-        ASCII_char <= 8'b0;
-    end
-    else begin
-        ASCII_char <= ASCII_char_nxt;
-    end
-end
-
-always @* begin
     if (!empty_fifo) begin
-        packets[0] = ASCII_package_out[31:24];
-        packets[1] = ASCII_package_out[23:16];
-        packets[2] = ASCII_package_out[15:8];
-        packets[3] = ASCII_package_out[7:0];
-        ASCII_char_nxt = packets[0];
-        ctr = 1;
+        packets[0] <= ASCII_package_in[23:16];
+        packets[1] <= ASCII_package_in[15:8];
+        packets[2] <= ASCII_package_in[7:0];
+        ASCII_char <= ASCII_package_in[31:24];
+        ctr <= 0;
     end
-    else if (ctr < 4) begin
-        ASCII_char_nxt = packets[ctr];
-        ctr = ctr + 1;
+    else if (ctr != 3) begin
+        ASCII_char <= packets[ctr];
+        ctr <= ctr + 1;  
     end
 end
 
