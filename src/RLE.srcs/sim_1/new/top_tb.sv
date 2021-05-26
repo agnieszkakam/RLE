@@ -40,10 +40,10 @@ end
 
 always@(posedge clk) begin
     nucleotide_ASCII_package = data_in[i];
-    if ( i == 8 )
-        $finish;
+    /*if ( i == 8 )
+       //$finish;
     else
-        i <= i + 1; 
+        i <= i + 1;*/ 
 end
 
 endmodule

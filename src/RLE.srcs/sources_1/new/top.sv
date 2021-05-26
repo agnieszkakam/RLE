@@ -21,7 +21,7 @@ module top(
 
 wire clk_400MHz;
 
-clk_wiz_1 clk_divider   (
+clk_wiz_0 clk_divider   (
     .clk_100MHz(clk),
     .clk_400MHz(clk_400MHz)
 );

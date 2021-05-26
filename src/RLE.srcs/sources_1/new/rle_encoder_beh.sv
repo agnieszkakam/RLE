@@ -14,6 +14,7 @@ module rle_encoder_beh
 (
     input clk,
     input rst,
+    //dodatkowe sygn. kontrolne pod AXI
     input [DATA_WIDTH - 1: 0] stream_in,
     output reg [DATA_WIDTH + CTR_WIDTH - 1 :0] compressed_stream,
     output reg valid
@@ -40,7 +41,7 @@ begin
         compressed_stream <= 0;
         $display("case I");
     end else begin
-        if ((stream_in_prev == 2'bx) || (stream_in_prev == 2'bz)) begin
+        if ((stream_in_prev == 'bx) || (stream_in_prev == 'bz)) begin
             valid <= 1'b0;
             seq_counter <= 0;
             $display("case II");
