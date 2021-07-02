@@ -15,6 +15,7 @@ module pkg2char_parser(
     input clk_400MHz,     
     input rst,
     input [31:0] ASCII_package_in,
+    input new_package,
     output reg [7:0] ASCII_char
 );
 
@@ -25,11 +26,11 @@ reg [7:0] packets [0:2];
 
 always @(posedge clk_400MHz) begin
     if (!rst) begin
-        ASCII_char <= 8'bxx;
+        ASCII_char <= 8'b00;
         ctr <= 3'd0;
     end
     else begin
-        if ((clk_400MHz & clk) & (ctr == 3)) begin
+        if (new_package & (ctr == 3)) begin
             packets[2] <= ASCII_package_in[7:0];
             packets[1] <= ASCII_package_in[15:8];
             packets[0] <= ASCII_package_in[23:16];

@@ -16,6 +16,7 @@ module top_noFIFO(
     input wire clk_400MHz,
     input wire rst,
     input wire [31:0] nucleotide_ASCII_package,
+    input wire new_ASCII_package,
     output wire valid,
     output wire [2:0] output_stream
 );
@@ -27,6 +28,7 @@ pkg2char_parser parser (
     .clk_400MHz(clk_400MHz),     
     .rst(rst),
     .ASCII_package_in(nucleotide_ASCII_package),
+    .new_package(new_ASCII_package),
     .ASCII_char(nucleo_single)
 );  
 

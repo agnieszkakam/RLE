@@ -41,12 +41,7 @@ begin
         compressed_stream <= 0;
         $display("case I");
     end else begin
-        if ((stream_in_prev == 'bx) || (stream_in_prev == 'bz)) begin
-            valid <= 1'b0;
-            seq_counter <= 0;
-            $display("case II");
-        end else if (stream_in == stream_in_prev) begin
-            $display("case III");
+        if (stream_in == stream_in_prev) begin
             if (seq_counter != CTR_MAX) begin
                 valid <= 1'b0;
                 seq_counter <= seq_counter + 1;
@@ -54,7 +49,7 @@ begin
                 valid <= 1'b1;
                 compressed_stream <= {seq_counter[CTR_WIDTH-1:0], stream_in_prev};
                 seq_counter <= 0;
-            end 
+            end
         end else begin
                 $display("case IV");
                 valid <= 1'b1;

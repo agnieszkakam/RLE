@@ -47,7 +47,7 @@ begin
         8'h63: compressed_data <= c;
         8'h67: compressed_data <= g;
         8'h74: compressed_data <= t;
-        default: compressed_data <= 8'hzz;
+        default: compressed_data <= 2'b00;          //duplicate of 'a'
     endcase
     
     if (!rst) begin

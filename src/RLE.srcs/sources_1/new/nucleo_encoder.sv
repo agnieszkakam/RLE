@@ -22,7 +22,7 @@ localparam a = 2'b00;
 localparam c = 2'b01;
 localparam g = 2'b10;
 localparam t = 2'b11;
-localparam invalid_code = 2'bzz;
+localparam invalid_code = 2'bz;
 
 always @* begin
     if ( !rst ) begin
