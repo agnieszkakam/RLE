@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_noFIFO_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_noFIFO_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="134409698fs"></ZoomEndTime>
+      <Cursor1Time time="50000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="185"></NameColumnWidth>
+      <ValueColumnWidth column_width="122"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/top_noFIFO_tb/clk_100MHz" type="logic">
+      <obj_property name="ElementShortName">clk_100MHz</obj_property>
+      <obj_property name="ObjectShortName">clk_100MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/clk_400MHz" type="logic">
+      <obj_property name="ElementShortName">clk_400MHz</obj_property>
+      <obj_property name="ObjectShortName">clk_400MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/new_ASCII_package" type="logic">
+      <obj_property name="ElementShortName">new_ASCII_package</obj_property>
+      <obj_property name="ObjectShortName">new_ASCII_package</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/nucleotide_ASCII_package" type="array">
+      <obj_property name="ElementShortName">nucleotide_ASCII_package[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nucleotide_ASCII_package[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/output_stream" type="array">
+      <obj_property name="ElementShortName">output_stream[2:0]</obj_property>
+      <obj_property name="ObjectShortName">output_stream[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[0:7][31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[0:7][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/pckg_counter" type="array">
+      <obj_property name="ElementShortName">pckg_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pckg_counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/char_counter" type="array">
+      <obj_property name="ElementShortName">char_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">char_counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/parser/ASCII_char" type="array">
+      <obj_property name="ElementShortName">ASCII_char[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ASCII_char[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/parser/ASCII_char_nxt" type="array">
+      <obj_property name="ElementShortName">ASCII_char_nxt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ASCII_char_nxt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/parser/ctr" type="array">
+      <obj_property name="ElementShortName">ctr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ctr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/parser/ctr_nxt" type="array">
+      <obj_property name="ElementShortName">ctr_nxt[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ctr_nxt[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/parser/packets" type="array">
+      <obj_property name="ElementShortName">packets[0:2][7:0]</obj_property>
+      <obj_property name="ObjectShortName">packets[0:2][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/nucleo_enc/nucleotide_ASCII" type="array">
+      <obj_property name="ElementShortName">nucleotide_ASCII[7:0]</obj_property>
+      <obj_property name="ObjectShortName">nucleotide_ASCII[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/nucleo_enc/nucleotide_code" type="array">
+      <obj_property name="ElementShortName">nucleotide_code[1:0]</obj_property>
+      <obj_property name="ObjectShortName">nucleotide_code[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/nucleo_enc/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/RLE_enc/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/RLE_enc/ready_prev" type="logic">
+      <obj_property name="ElementShortName">ready_prev</obj_property>
+      <obj_property name="ObjectShortName">ready_prev</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/RLE_enc/stream_in" type="array">
+      <obj_property name="ElementShortName">stream_in[1:0]</obj_property>
+      <obj_property name="ObjectShortName">stream_in[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/RLE_enc/stream_in_prev" type="array">
+      <obj_property name="ElementShortName">stream_in_prev[1:0]</obj_property>
+      <obj_property name="ObjectShortName">stream_in_prev[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/RLE_enc/seq_counter" type="array">
+      <obj_property name="ElementShortName">seq_counter[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seq_counter[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/RLE_enc/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/RLE_enc/compressed_stream" type="array">
+      <obj_property name="ElementShortName">compressed_stream[2:0]</obj_property>
+      <obj_property name="ObjectShortName">compressed_stream[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_noFIFO_tb/RLE_system/RLE_enc/seq_counter" type="array">
+      <obj_property name="ElementShortName">seq_counter[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seq_counter[1:0]</obj_property>
+   </wvobject>
+</wave_config>

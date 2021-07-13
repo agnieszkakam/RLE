@@ -33,17 +33,20 @@ pkg2char_parser parser (
 );  
 
 wire [1:0] nucleotide_code_single;
+wire valid_nucleo_code;
 
 nucleo_encoder nucleo_enc (
     .clk(clk_400MHz),
     .rst(rst),
     .nucleotide_ASCII(nucleo_single),
+    .valid(valid_nucleo_code),
     .nucleotide_code(nucleotide_code_single)
 );
 
 rle_encoder_beh #(.DATA_WIDTH(2),.CTR_WIDTH(1)) RLE_enc ( 
     .clk(clk_400MHz),
     .rst(rst),
+    .ready(valid_nucleo_code),
     .stream_in(nucleotide_code_single),
     .compressed_stream(output_stream),
     .valid(valid)

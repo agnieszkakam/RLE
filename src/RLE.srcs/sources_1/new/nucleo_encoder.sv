@@ -14,6 +14,7 @@ module nucleo_encoder(
     input clk,
     input rst,
     input [7:0] nucleotide_ASCII,
+    output reg valid,
     output reg [1:0] nucleotide_code
 );
 
@@ -22,11 +23,13 @@ localparam a = 2'b00;
 localparam c = 2'b01;
 localparam g = 2'b10;
 localparam t = 2'b11;
-localparam invalid_code = 2'bz;
+localparam invalid_code = 2'b0;
 
 always @* begin
+    valid = 1'b1;
     if ( !rst ) begin
-        nucleotide_code = 2'bz;
+        nucleotide_code = 2'b0;
+        valid = 1'b0;
     end
     else begin
         case( nucleotide_ASCII)
@@ -34,7 +37,11 @@ always @* begin
             8'h63: nucleotide_code = c;
             8'h67: nucleotide_code = g;
             8'h74: nucleotide_code = t;
-            default: nucleotide_code = invalid_code;
+            default:
+            begin
+                nucleotide_code = invalid_code;
+                valid = 1'b0;
+            end
         endcase
     end
 end
