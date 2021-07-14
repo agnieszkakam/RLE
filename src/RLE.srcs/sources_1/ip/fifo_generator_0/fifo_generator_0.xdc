@@ -57,12 +57,9 @@
 #                         Native FIFO Constraints                              #
 #------------------------------------------------------------------------------#
 
+# Set false path on the asynchronous reset port (rst) to the inputs of synchronizers
+#set_false_path -through [get_pins -of [get_cells -hier -filter name=~*rst_wr_reg2_inst*/arststages_ff_reg[1]] -filter {REF_PIN_NAME == Q}] -to [get_pins -of [get_cells -hier -filter name=~*rstblk*/*] -filter {REF_PIN_NAME == PRE}]  
 
-# False path constraint for Built-in FIFO reset
-
-set_false_path -through [get_ports rst] -to [get_pins -of [get_cells -hier -filter name=~*rstbt*/*] -filter {REF_PIN_NAME == PRE}]  
-set_false_path -from [get_cells -hierarchical -filter {NAME =~ *rstbt*/*rst_reg[*]}]
-set_false_path -from [get_cells -hierarchical -filter {NAME =~ *rstbt*/*rst_reg_reg}]
 
 
 ################################################################################
