@@ -25,22 +25,22 @@ localparam g = 2'b10;
 localparam t = 2'b11;
 localparam invalid_code = 2'b0;
 
-always @* begin
+always @(posedge clk) begin
     valid = 1'b1;
     if ( !rst ) begin
-        nucleotide_code = 2'b0;
-        valid = 1'b0;
+        nucleotide_code <= 2'b0;
+        valid <= 1'b0;
     end
     else begin
         case( nucleotide_ASCII)
-            8'h61: nucleotide_code = a;
-            8'h63: nucleotide_code = c;
-            8'h67: nucleotide_code = g;
-            8'h74: nucleotide_code = t;
+            8'h61: nucleotide_code <= a;
+            8'h63: nucleotide_code <= c;
+            8'h67: nucleotide_code <= g;
+            8'h74: nucleotide_code <= t;
             default:
             begin
-                nucleotide_code = invalid_code;
-                valid = 1'b0;
+                nucleotide_code <= invalid_code;
+                valid <= 1'b0;
             end
         endcase
     end

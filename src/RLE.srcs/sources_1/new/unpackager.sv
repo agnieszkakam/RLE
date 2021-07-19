@@ -20,18 +20,18 @@ module unpackager   (
     output reg [7:0] ASCII_char
 );
 
-wire empty_fifo, valid;
+wire empty_fifo, valid, full;
 wire [31:0] ASCII_package_out;
 
 fifo_generator_0 fifo (
-    .rst    (rst),
+    .rst    (!rst),
     .wr_clk (clk),
     .rd_clk (clk_400MHz),
     .din    (ASCII_package_in),
     .wr_en  (wr_en),
     .rd_en  (rd_en),
     .dout   (ASCII_package_out),
-    .full   (),
+    .full   (full),
     .wr_ack (),
     .overflow(),
     .empty  (empty_fifo),
@@ -46,10 +46,10 @@ reg [7:0] packets [0:2];
 
 always @(posedge clk_400MHz) begin
     if (valid) begin
-        packets[0] <= ASCII_package_in[23:16];
-        packets[1] <= ASCII_package_in[15:8];
-        packets[2] <= ASCII_package_in[7:0];
-        ASCII_char <= ASCII_package_in[31:24];
+        packets[0] <= ASCII_package_out[23:16];
+        packets[1] <= ASCII_package_out[15:8];
+        packets[2] <= ASCII_package_out[7:0];
+        ASCII_char <= ASCII_package_out[31:24];
         ctr <= 0;
     end
     else if (ctr != 3) begin

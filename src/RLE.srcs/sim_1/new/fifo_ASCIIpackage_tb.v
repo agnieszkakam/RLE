@@ -24,7 +24,7 @@ wire [31:0] dout;
 wire [3:0] rd_data_count, wr_data_count;
 wire full, empty, overflow, underflow, valid, wr_ack;
 
-integer k;
+integer k = 0;
 
 
 /**
@@ -87,28 +87,31 @@ initial begin
     #(`wrclk_period * 3);
     rst = 1'b0;
     #(`wrclk_period * 27);           //according to docs
-    
-    for (k = 0; k < 5; k = k + 1) begin
-        //Start writing to FIFO
-        #(`wrclk_period);
-        wr_en = 1'b1;
-        din = k+10;
-        #`wrclk_period;
-        
-        //Stop writing to FIFO
-        wr_en = 1'b0;
-        #`wrclk_period;
-        
-        //Start reading from FIFO
-        rd_en = 1'b1;       
-        #`rdclk_period;
-        
-        //Stop reading from FIFO
-        rd_en = 1'b0;
-        #`rdclk_period;
-    end
-    $stop;
+
 end    
+    
+always begin
+    //Start writing to FIFO
+    wr_en <= 1'b1;
+    din <= k + 1;
+    k <= k + 1;
+    #`wrclk_period;
+    
+    //Stop writing to FIFO
+    wr_en <= 1'b0;
+    #`wrclk_period;
+end
+
+always begin
+    //Start reading from FIFO
+    rd_en <= 1'b1;       
+    #`rdclk_period;
+    
+    //Stop reading from FIFO
+    rd_en <= 1'b0;
+    #`rdclk_period;
+end
+    
     
 endmodule
 

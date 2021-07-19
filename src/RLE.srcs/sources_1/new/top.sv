@@ -13,6 +13,8 @@
 module top(
     input wire clk,
     input wire rst,
+    input wire wr_en,
+    input wire rd_en,
     input wire [31:0] nucleotide_ASCII_package,
     output wire valid,
     output wire [2:0] output_stream
@@ -31,6 +33,8 @@ unpackager unpackager (
     .clk(clk),
     .clk_400MHz(clk_400MHz),
     .rst(rst),
+    .wr_en(wr_en),
+    .rd_en(rd_en),
     .ASCII_package_in(nucleotide_ASCII_package),
     .ASCII_char(nucleotide_ASCII_single)
 );
