@@ -85,8 +85,8 @@ always @(posedge clk) begin
         #`wrclk_period;
         
         //Stop writing to FIFO
-        wr_en <= 1'b0;
-        #`wrclk_period;
+        /*wr_en <= 1'b0;
+        #`wrclk_period;*/
     end
 end
 
