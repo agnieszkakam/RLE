@@ -12,6 +12,13 @@
 
 module fifo_tb();
 
+/**
+ * Parameters
+ */
+ 
+`define wrclk_period 40
+`define rdclk_period 10 
+
 
 /**
  * Local variables and signals
@@ -25,14 +32,6 @@ wire [3:0] rd_data_count, wr_data_count;
 wire full, empty, overflow, underflow, valid, wr_ack;
 
 integer i,j,k;
-
-
-/**
- * Parameters
- */
- 
-`define wrclk_period 40
-`define rdclk_period 10  
 
 
 /**

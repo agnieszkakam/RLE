@@ -1,27 +1,13 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2308d4295dca4317a75af360ea7c31ae --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 2308d4295dca4317a75af360ea7c31ae --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot file_tb_behav xil_defaultlib.file_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module unisims_ver.IBUF
-Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
-Compiling module unisims_ver.BUFG
-Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
-Compiling module xil_defaultlib.clk_wiz_0
-Compiling module fifo_generator_v13_2_3.fifo_generator_v13_2_3_sync_stag...
-Compiling module fifo_generator_v13_2_3.fifo_generator_v13_2_3_bhv_ver_a...
-Compiling module fifo_generator_v13_2_3.fifo_generator_v13_2_3_CONV_VER(...
-Compiling module fifo_generator_v13_2_3.fifo_generator_vlog_beh(C_DATA_C...
-Compiling module fifo_generator_v13_2_3.fifo_generator_v13_2_3(C_DATA_CO...
-Compiling module xil_defaultlib.fifo_generator_0
-Compiling module xil_defaultlib.unpackager
-Compiling module xil_defaultlib.nucleo_encoder
-Compiling module xil_defaultlib.rle_encoder_beh(DATA_WIDTH=2,CTR...
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.file_tb
+WARNING: [XSIM 43-3373] "C:/git/RLE/src/RLE.srcs/sim_1/new/file_tb.sv" Line 34. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot top_tb_behav
+Built simulation snapshot file_tb_behav
