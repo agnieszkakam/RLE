@@ -18,37 +18,62 @@ module file_tb ();
  
 localparam MAX_NR_OF_VECTORS = 32;
 
+
 /**
  * Local variables and signals
 */
 
-int file;             //file handle
-int i, idx, tab [MAX_NR_OF_VECTORS];
+int file, i, idx;
+int mem [MAX_NR_OF_VECTORS];
 
-initial begin  
+logic [7:0] tab [MAX_NR_OF_VECTORS];
+
+/**
+ * Tasks
+*/
+task read_vectors_from_txt (output logic [7:0] testvectors [MAX_NR_OF_VECTORS]);
+    
+    automatic int line_counter = 0;
+    automatic logic [7:0] line = 0;
+   
     file = $fopen ("testvectors.txt", "r");
     
     if (file) begin 
         $display("File was opened successfully : %0d", file);
         
         while (!$feof(file)) begin
-          $fscanf(file,"%d",idx);
-          $display("i=%0d (%d)", i, idx);
-          tab[i] = idx;
-          i = i + 1;
-          if (i == MAX_NR_OF_VECTORS)
+          $fscanf(file,"%d",line);
+          testvectors[line_counter] = line;
+          line_counter = line_counter + 1;
+          if (line_counter == MAX_NR_OF_VECTORS)
             break;
         end
         
-        $fclose(file);
-        
-        for (int i = 0; i < MAX_NR_OF_VECTORS; i++) begin
-          $display ("%d", tab[i]);
-        end
-        
+        $fclose(file);      
     end
     else
         $display("File was not opened successfully : %0d", file);
+endtask
+
+
+/**
+ * Test
+*/
+
+initial begin
+    
+    read_vectors_from_txt(tab);
+    
+    for (int i = 0; i < MAX_NR_OF_VECTORS; i++) begin
+      $display ("%d", tab[i]);
+    end
+    
+    $display("Loading rom.");
+    $readmemh("testvectors.mem", mem);
+    
+    for (int i = 0; i < MAX_NR_OF_VECTORS; i++) begin
+          $display ("%d", mem[i]);
+    end
     
     $stop;
 end

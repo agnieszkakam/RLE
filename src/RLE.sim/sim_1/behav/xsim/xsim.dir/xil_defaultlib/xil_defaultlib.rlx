@@ -3,12 +3,13 @@
 Dec  7 2018
 00:33:28
 C:/git/RLE/src/RLE.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/git/RLE/src/RLE.srcs/sim_1/new/encoder_testvecors_tb.sv,1626977909,systemVerilog,,,,encoder_testvecors_tb,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1,,,,,
 C:/git/RLE/src/RLE.srcs/sim_1/new/fifo_ASCIIpackage_tb.v,1626684208,verilog,,,,fifo_ASCIIpackage_tb,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1,,,,,
 C:/git/RLE/src/RLE.srcs/sim_1/new/fifo_tb.v,1626283298,verilog,,,,fifo_tb,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1,,,,,
-C:/git/RLE/src/RLE.srcs/sim_1/new/file_tb.sv,1626968121,systemVerilog,,,,file_tb,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1,,,,,
+C:/git/RLE/src/RLE.srcs/sim_1/new/file_tb.sv,1627061447,systemVerilog,,,,file_tb,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1,,,,,
 C:/git/RLE/src/RLE.srcs/sim_1/new/nucleo_end_tb.sv,1620401136,systemVerilog,,,,nucleo_enc_tb,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0,,,,,
 C:/git/RLE/src/RLE.srcs/sim_1/new/top_noFIFO_tb.sv,1625249120,systemVerilog,,,,top_noFIFO_tb,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1,,,,,
-C:/git/RLE/src/RLE.srcs/sim_1/new/top_tb.sv,1626705316,systemVerilog,,,,top_tb,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1,,,,,
+C:/git/RLE/src/RLE.srcs/sim_1/new/top_tb.sv,1627060620,systemVerilog,,,,top_tb,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1,,,,,
 C:/git/RLE/src/RLE.srcs/sources_1/imports/Desktop/rle_enc_dna_tb.sv,1620214519,systemVerilog,,,,rle_enc_dna_tb,,,,,,,,
 C:/git/RLE/src/RLE.srcs/sources_1/imports/Desktop/rle_encoder_dna.sv,1620213639,systemVerilog,,C:/git/RLE/src/RLE.srcs/sources_1/imports/Desktop/rle_enc_dna_tb.sv,,rle_encoder_dna,,,,,,,,
 C:/git/RLE/src/RLE.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.v,1621491312,verilog,,,,clk_wiz_0,,,../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1,,,,,

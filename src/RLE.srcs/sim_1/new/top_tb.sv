@@ -20,9 +20,10 @@ logic clk, rst, wr_en, rd_en, valid;
 logic [31:0] nucleotide_ASCII_package;
 logic [2:0] output_stream;
 
-int data_in[0:7] = { 32'h61636361, 32'h61746774, 32'h74616363, 32'h61636361, 32'h61636361, 32'h61746774, 32'h61646161, 32'h74746774 };
+//int data_in[0:7] = { 32'h61636361, 32'h61746774, 32'h74616363, 32'h61636361, 32'h61636361, 32'h61746774, 32'h61646161, 32'h74746774 };
 int k = 0;
-
+int file, output_file;             //file handle
+int i, idx, data_in [NR_OF_VECTORS];
 
 /**
  * Parameters
@@ -30,7 +31,7 @@ int k = 0;
  
 `define wrclk_period 40
 `define rdclk_period 10  
-
+localparam NR_OF_VECTORS = 25;
 
 /**
  * UUT placement
@@ -61,6 +62,10 @@ always #(`wrclk_period/2)  clk = ~clk;
 
 initial begin
     
+    //Load test vectors
+    $display("Loading testvectors.");
+    $readmemh("encoder_testvectors.mem", data_in);
+        
     //Initialization
     rst = 1'b1;
     nucleotide_ASCII_package = 32'b0;
@@ -76,17 +81,33 @@ initial begin
     
 end
 
+initial begin
+
+    output_file = $fopen ("encoder_vectors_out.txt", "w");
+    if (output_file)
+        $display("Output file was opened successfully : %0d", output_file);
+    else
+        $display("Output file was not opened successfully : %0d", output_file);
+    
+    for (int j = 0; j < 1000; j++) begin
+        @(posedge RLE_system.clk_400MHz);
+        if (valid) begin
+            $display("Output=%3b",output_stream[2:0]);
+            $fdisplay(output_file,"%3b",output_stream[2:0]);
+         end
+    end
+    
+    $fclose(output_file);
+    $stop;
+end
+
 always @(posedge clk) begin
     if (!RLE_system.unpackager.full) begin
         //Start writing to FIFO
         wr_en <= 1'b1;
         nucleotide_ASCII_package = data_in[k];
-        k <= (k == 7)? 0 : k + 1;
+        k <= (k == NR_OF_VECTORS - 1)? 0 : k + 1;
         #`wrclk_period;
-        
-        //Stop writing to FIFO
-        /*wr_en <= 1'b0;
-        #`wrclk_period;*/
     end
 end
 

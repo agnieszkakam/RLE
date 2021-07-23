@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1" \
+"../../../../RLE.srcs/sim_1/new/encoder_testvecors_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

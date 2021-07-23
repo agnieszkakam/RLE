@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1812970000fs"></ZoomStartTime>
-      <ZoomEndTime time="1952970001fs"></ZoomEndTime>
-      <Cursor1Time time="1854570000fs"></Cursor1Time>
+      <ZoomStartTime time="1660000000fs"></ZoomStartTime>
+      <ZoomEndTime time="2143500001fs"></ZoomEndTime>
+      <Cursor1Time time="1860000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="23" />
+   <WVObjectSize size="24" />
    <wvobject fp_name="/top_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -81,8 +81,8 @@
       <obj_property name="ObjectShortName">wr_data_count[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/top_tb/data_in" type="array">
-      <obj_property name="ElementShortName">data_in[0:7][31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[0:7][31:0]</obj_property>
+      <obj_property name="ElementShortName">data_in[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[0:31][31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/top_tb/RLE_system/unpackager/ctr" type="array">
       <obj_property name="ElementShortName">ctr[2:0]</obj_property>
@@ -112,5 +112,10 @@
       <obj_property name="ElementShortName">output_stream[2:0]</obj_property>
       <obj_property name="ObjectShortName">output_stream[2:0]</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
