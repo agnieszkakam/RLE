@@ -20,7 +20,6 @@ logic clk, rst, wr_en, rd_en, valid;
 logic [31:0] nucleotide_ASCII_package;
 logic [2:0] output_stream;
 
-//int data_in[0:7] = { 32'h61636361, 32'h61746774, 32'h74616363, 32'h61636361, 32'h61636361, 32'h61746774, 32'h61646161, 32'h74746774 };
 int k = 0;
 int file, output_file;             //file handle
 int i, idx, data_in [NR_OF_VECTORS];
@@ -102,7 +101,7 @@ initial begin
 end
 
 always @(posedge clk) begin
-    if (!RLE_system.unpackager.full) begin
+    if (!RLE_system.RLE_encoder_system_IP.unpackager.full) begin
         //Start writing to FIFO
         wr_en <= 1'b1;
         nucleotide_ASCII_package = data_in[k];

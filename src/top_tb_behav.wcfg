@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1660000000fs"></ZoomStartTime>
-      <ZoomEndTime time="2143500001fs"></ZoomEndTime>
-      <Cursor1Time time="1860000000fs"></Cursor1Time>
+      <ZoomStartTime time="1639434699fs"></ZoomStartTime>
+      <ZoomEndTime time="2161028640fs"></ZoomEndTime>
+      <Cursor1Time time="11090000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="/top_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -32,77 +32,61 @@
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/wr_en" type="logic">
-      <obj_property name="ElementShortName">wr_en</obj_property>
-      <obj_property name="ObjectShortName">wr_en</obj_property>
+   <wvobject fp_name="/top_tb/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[0:24][31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[0:24][31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/fifo/din" type="array">
-      <obj_property name="ElementShortName">din[31:0]</obj_property>
-      <obj_property name="ObjectShortName">din[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/fifo/dout" type="array">
-      <obj_property name="ElementShortName">dout[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/rd_en" type="logic">
-      <obj_property name="ElementShortName">rd_en</obj_property>
-      <obj_property name="ObjectShortName">rd_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/empty_fifo" type="logic">
-      <obj_property name="ElementShortName">empty_fifo</obj_property>
-      <obj_property name="ObjectShortName">empty_fifo</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/valid" type="logic">
-      <obj_property name="ElementShortName">valid</obj_property>
-      <obj_property name="ObjectShortName">valid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/fifo/full" type="logic">
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/full" type="logic">
       <obj_property name="ElementShortName">full</obj_property>
       <obj_property name="ObjectShortName">full</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/fifo/wr_ack" type="logic">
-      <obj_property name="ElementShortName">wr_ack</obj_property>
-      <obj_property name="ObjectShortName">wr_ack</obj_property>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/empty_fifo" type="logic">
+      <obj_property name="ElementShortName">empty_fifo</obj_property>
+      <obj_property name="ObjectShortName">empty_fifo</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/fifo/overflow" type="logic">
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/fifo/overflow" type="logic">
       <obj_property name="ElementShortName">overflow</obj_property>
       <obj_property name="ObjectShortName">overflow</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/fifo/underflow" type="logic">
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/fifo/underflow" type="logic">
       <obj_property name="ElementShortName">underflow</obj_property>
       <obj_property name="ObjectShortName">underflow</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/fifo/rd_data_count" type="array">
-      <obj_property name="ElementShortName">rd_data_count[3:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_data_count[3:0]</obj_property>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/wr_en" type="logic">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/fifo/wr_data_count" type="array">
-      <obj_property name="ElementShortName">wr_data_count[3:0]</obj_property>
-      <obj_property name="ObjectShortName">wr_data_count[3:0]</obj_property>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/data_in" type="array">
-      <obj_property name="ElementShortName">data_in[0:31][31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[0:31][31:0]</obj_property>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/ctr" type="array">
-      <obj_property name="ElementShortName">ctr[2:0]</obj_property>
-      <obj_property name="ObjectShortName">ctr[2:0]</obj_property>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/fifo/din" type="array">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/packets" type="array">
-      <obj_property name="ElementShortName">packets[0:2][7:0]</obj_property>
-      <obj_property name="ObjectShortName">packets[0:2][7:0]</obj_property>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/fifo/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/nucleotide_code_single" type="array">
-      <obj_property name="ElementShortName">nucleotide_code_single[1:0]</obj_property>
-      <obj_property name="ObjectShortName">nucleotide_code_single[1:0]</obj_property>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/ASCII_package_in" type="array">
+      <obj_property name="ElementShortName">ASCII_package_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ASCII_package_in[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/unpackager/ASCII_char" type="array">
-      <obj_property name="ElementShortName">ASCII_char[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ASCII_char[7:0]</obj_property>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/nucleo_enc/nucleotide_ASCII" type="array">
+      <obj_property name="ElementShortName">nucleotide_ASCII[7:0]</obj_property>
+      <obj_property name="ObjectShortName">nucleotide_ASCII[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/valid_nucleo_code" type="logic">
-      <obj_property name="ElementShortName">valid_nucleo_code</obj_property>
-      <obj_property name="ObjectShortName">valid_nucleo_code</obj_property>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/nucleo_enc/nucleotide_code" type="array">
+      <obj_property name="ElementShortName">nucleotide_code[1:0]</obj_property>
+      <obj_property name="ObjectShortName">nucleotide_code[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/nucleo_enc/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
    </wvobject>
    <wvobject fp_name="/top_tb/valid" type="logic">
       <obj_property name="ElementShortName">valid</obj_property>
