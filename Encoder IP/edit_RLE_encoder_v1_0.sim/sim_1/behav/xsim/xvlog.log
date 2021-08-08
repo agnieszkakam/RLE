@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/git/rle/encoder ip/RLE_encoder_1.0/hdl/RLE_encoder_v1_0_S00_AXI.v" into library work
+INFO: [VRFC 10-311] analyzing module RLE_encoder_v1_0_S00_AXI
+INFO: [VRFC 10-311] analyzing module fifo_generator_0
+INFO: [VRFC 10-311] analyzing module unpackager
+INFO: [VRFC 10-311] analyzing module nucleo_encoder
+INFO: [VRFC 10-311] analyzing module rle_encoder_beh
+WARNING: [VRFC 10-3380] identifier 'DATA_WIDTH' is used before its declaration [c:/git/rle/encoder ip/RLE_encoder_1.0/hdl/RLE_encoder_v1_0_S00_AXI.v:1009]
+WARNING: [VRFC 10-3380] identifier 'DATA_WIDTH' is used before its declaration [c:/git/rle/encoder ip/RLE_encoder_1.0/hdl/RLE_encoder_v1_0_S00_AXI.v:1010]
+INFO: [VRFC 10-311] analyzing module packager
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module RLE_encoder_system
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/git/rle/encoder ip/RLE_encoder_1.0/hdl/RLE_encoder_v1_0.v" into library work
+INFO: [VRFC 10-311] analyzing module RLE_encoder_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/git/rle/encoder ip/edit_RLE_encoder_v1_0.sim/sim_1/behav/xsim/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl

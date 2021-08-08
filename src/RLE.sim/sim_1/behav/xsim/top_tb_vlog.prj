@@ -4,6 +4,7 @@ verilog xil_defaultlib  --include "../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1
 "../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_clk_wiz.v" \
 "../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.v" \
 "../../../../RLE.srcs/sources_1/new/RLE_encoder_system.v" \
+"../../../../RLE.srcs/sources_1/new/packager.v" \
 
 sv xil_defaultlib  --include "../../../../RLE.srcs/sources_1/ip/clk_wiz_0_1" \
 "../../../../RLE.srcs/sources_1/new/nucleo_encoder.sv" \

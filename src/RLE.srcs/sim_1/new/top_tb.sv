@@ -18,7 +18,7 @@ module top_tb();
 
 logic clk, rst, wr_en, rd_en, valid;
 logic [31:0] nucleotide_ASCII_package;
-logic [2:0] output_stream;
+logic [15:0] output_data;
 
 int k = 0;
 int file, output_file;             //file handle
@@ -42,8 +42,7 @@ top RLE_system (
     .wr_en(wr_en),
     .rd_en(rd_en),
     .nucleotide_ASCII_package(nucleotide_ASCII_package),
-    .valid(valid),
-    .output_stream(output_stream)
+    .output_data(output_data)
 );
 
 
@@ -79,7 +78,7 @@ initial begin
     #(`wrclk_period * 27);           //according to docs
     
 end
-
+/*
 initial begin
 
     output_file = $fopen ("encoder_vectors_out.txt", "w");
@@ -98,7 +97,7 @@ initial begin
     
     $fclose(output_file);
     $stop;
-end
+end*/
 
 always @(posedge clk) begin
     if (!RLE_system.RLE_encoder_system_IP.unpackager.full) begin

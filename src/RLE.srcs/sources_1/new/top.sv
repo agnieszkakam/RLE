@@ -16,8 +16,7 @@ module top(
     input wire wr_en,
     input wire rd_en,
     input wire [31:0] nucleotide_ASCII_package,
-    output wire valid,
-    output wire [2:0] output_stream
+    output wire [15:0] output_data
 );
 
 wire clk_400MHz;
@@ -34,8 +33,7 @@ RLE_encoder_system RLE_encoder_system_IP (
     .wr_en(wr_en),
     .rd_en(rd_en),
     .ASCII_package_in(nucleotide_ASCII_package),
-    .compressed_stream(output_stream),
-    .valid(valid)
+    .output_data(output_data)
 );
 
 endmodule

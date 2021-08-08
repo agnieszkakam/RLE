@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog work  \
+"../../../../RLE_encoder_1.0/hdl/RLE_encoder_v1_0_S00_AXI.v" \
+"../../../../RLE_encoder_1.0/hdl/RLE_encoder_v1_0.v" \
+
+# compile glbl module
+verilog work "glbl.v"
+
+# Do not sort compile order
+nosort

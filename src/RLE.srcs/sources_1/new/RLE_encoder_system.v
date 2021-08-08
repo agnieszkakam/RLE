@@ -16,8 +16,7 @@ module RLE_encoder_system(
     input wire wr_en,
     input wire rd_en,
     input wire [31:0] ASCII_package_in,
-    output wire [2:0] compressed_stream,
-    output wire valid
+    output wire [15:0] output_data
 );
     
 wire [7:0] nucleotide_ASCII_single;
@@ -43,6 +42,9 @@ nucleo_encoder nucleo_enc (
     .nucleotide_code(nucleotide_code_single)
 );
 
+wire [2:0] compressed_stream;
+wire valid;
+
 rle_encoder_beh #(.DATA_WIDTH(2),.CTR_WIDTH(1)) RLE_enc ( 
     .clk(clk_400MHz),
     .rst(rst),
@@ -50,6 +52,15 @@ rle_encoder_beh #(.DATA_WIDTH(2),.CTR_WIDTH(1)) RLE_enc (
     .stream_in(nucleotide_code_single),
     .compressed_stream(compressed_stream),
     .valid(valid)
+);
+    
+packager packager (
+    .clk(clk),
+    .clk_400MHz(clk_400MHz),
+    .rst(rst),
+    .compressed_stream(compressed_stream),
+    .ready(valid),
+    .output_data(output_data)
 );
     
 endmodule

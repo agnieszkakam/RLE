@@ -1,0 +1,7 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+c:/git/rle/encoder ip/RLE_encoder_1.0/hdl/RLE_encoder_v1_0.v,1628334408,verilog,,,,RLE_encoder_v1_0,,,,,,,,
+c:/git/rle/encoder ip/RLE_encoder_1.0/hdl/RLE_encoder_v1_0_S00_AXI.v,1628428075,verilog,,c:/git/rle/encoder ip/RLE_encoder_1.0/hdl/RLE_encoder_v1_0.v,,RLE_encoder_system;RLE_encoder_v1_0_S00_AXI;clk_wiz_0_clk_wiz;fifo_generator_0;nucleo_encoder;packager;rle_encoder_beh;top;unpackager,,,,,,,,
+c:/git/rle/encoder ip/edit_RLE_encoder_v1_0.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,

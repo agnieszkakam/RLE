@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto b7a0aa51fe7f4b21ab7db60623ee61a1 --debug typical --relax --mt 2 -L work -L unisims_ver -L unimacro_ver -L secureip --snapshot RLE_encoder_v1_0_behav work.RLE_encoder_v1_0 work.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <fifo_generator_v13_2_3> not found while processing module instance <inst> [c:/git/rle/encoder ip/RLE_encoder_1.0/hdl/RLE_encoder_v1_0_S00_AXI.v:474]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

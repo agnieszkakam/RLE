@@ -21,6 +21,7 @@ Compiling module xil_defaultlib.fifo_generator_0
 Compiling module xil_defaultlib.unpackager
 Compiling module xil_defaultlib.nucleo_encoder
 Compiling module xil_defaultlib.rle_encoder_beh(DATA_WIDTH=2,CTR...
+Compiling module xil_defaultlib.packager
 Compiling module xil_defaultlib.RLE_encoder_system
 Compiling module xil_defaultlib.top
 Compiling module xil_defaultlib.top_tb

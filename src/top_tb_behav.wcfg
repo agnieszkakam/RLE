@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1639434699fs"></ZoomStartTime>
-      <ZoomEndTime time="2161028640fs"></ZoomEndTime>
-      <Cursor1Time time="11090000000fs"></Cursor1Time>
+      <ZoomStartTime time="1775200000fs"></ZoomStartTime>
+      <ZoomEndTime time="1904371214fs"></ZoomEndTime>
+      <Cursor1Time time="2000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
-      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+      <ValueColumnWidth column_width="125"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="20" />
+   <WVObjectSize size="23" />
    <wvobject fp_name="/top_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -39,18 +39,6 @@
    <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/full" type="logic">
       <obj_property name="ElementShortName">full</obj_property>
       <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/empty_fifo" type="logic">
-      <obj_property name="ElementShortName">empty_fifo</obj_property>
-      <obj_property name="ObjectShortName">empty_fifo</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/fifo/overflow" type="logic">
-      <obj_property name="ElementShortName">overflow</obj_property>
-      <obj_property name="ObjectShortName">overflow</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/fifo/underflow" type="logic">
-      <obj_property name="ElementShortName">underflow</obj_property>
-      <obj_property name="ObjectShortName">underflow</obj_property>
    </wvobject>
    <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/unpackager/wr_en" type="logic">
       <obj_property name="ElementShortName">wr_en</obj_property>
@@ -88,18 +76,45 @@
       <obj_property name="ElementShortName">valid</obj_property>
       <obj_property name="ObjectShortName">valid</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/valid" type="logic">
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/RLE_enc/compressed_stream" type="array">
+      <obj_property name="ElementShortName">compressed_stream[2:0]</obj_property>
+      <obj_property name="ObjectShortName">compressed_stream[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/RLE_enc/valid" type="logic">
       <obj_property name="ElementShortName">valid</obj_property>
       <obj_property name="ObjectShortName">valid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/output_stream" type="array">
-      <obj_property name="ElementShortName">output_stream[2:0]</obj_property>
-      <obj_property name="ObjectShortName">output_stream[2:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/top_tb/i" type="array">
       <obj_property name="ElementShortName">i[31:0]</obj_property>
       <obj_property name="ObjectShortName">i[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/packager/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/packager/compressed_stream" type="array">
+      <obj_property name="ElementShortName">compressed_stream[2:0]</obj_property>
+      <obj_property name="ObjectShortName">compressed_stream[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/RLE_system/output_data" type="array">
+      <obj_property name="ElementShortName">output_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">output_data[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/packager/pkg_counter" type="array">
+      <obj_property name="ElementShortName">pkg_counter[1:0]</obj_property>
+      <obj_property name="ObjectShortName">pkg_counter[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/packager/package" type="array">
+      <obj_property name="ElementShortName">package[15:0]</obj_property>
+      <obj_property name="ObjectShortName">package[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/RLE_system/RLE_encoder_system_IP/packager/package_nxt" type="array">
+      <obj_property name="ElementShortName">package_nxt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">package_nxt[15:0]</obj_property>
    </wvobject>
 </wave_config>
