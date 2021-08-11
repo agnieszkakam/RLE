@@ -1,0 +1,1 @@
+-wto "2308d4295dca4317a75af360ea7c31ae" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "rle_decoder_dna_tb_behav" "xil_defaultlib.rle_decoder_dna_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

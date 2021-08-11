@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Apr 30 10:21:35 2021
+# Process ID: 17496
+# Current directory: D:/MadziaPliki/SDUP/RLE_repo/RLE/src
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7696 D:\MadziaPliki\SDUP\RLE_repo\RLE\src\RLE.xpr
+# Log file: D:/MadziaPliki/SDUP/RLE_repo/RLE/src/vivado.log
+# Journal file: D:/MadziaPliki/SDUP/RLE_repo/RLE/src\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source rle_enc_beh_tb.tcl
+close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.srcs/sim_1/new/rle_dec_beh_tb.v w ]
+add_files -fileset sim_1 D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.srcs/sim_1/new/rle_dec_beh_tb.v
+update_compile_order -fileset sim_1
+set_property file_type SystemVerilog [get_files  D:/MadziaPliki/SDUP/RLE_repo/RLE/src/RLE.srcs/sim_1/new/rle_dec_beh_tb.v]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top rle_dec_beh_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source rle_dec_beh_tb.tcl
+close_sim
+launch_simulation
+source rle_dec_beh_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top rle_decoder_beh [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source rle_dec_beh_tb.tcl
+close_sim
+launch_simulation
+source rle_dec_beh_tb.tcl
+close_sim
+launch_simulation
+source rle_dec_beh_tb.tcl
+close_sim
+launch_simulation
+source rle_dec_beh_tb.tcl
+run 100 ns
+close_sim
+launch_simulation
+source rle_dec_beh_tb.tcl
+close_sim
+launch_simulation
+source rle_dec_beh_tb.tcl
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+close_sim
+launch_simulation
+source rle_dec_beh_tb.tcl
+close_sim
