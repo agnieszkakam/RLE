@@ -14,11 +14,12 @@ module rle_decoder_dna
 (
     input clk,
     input rst,
-    input [3:0] dna_stream_in, 
+    input [3:0] dna_stream_in,
     output reg [1:0] dna_stream,
     output reg ready,
     output reg [1:0] curr_count,
-    output reg rd_flag
+    output reg rd_flag,
+    output reg new_pack
 );
 
 //parameter DATA_WIDTH=3,
@@ -32,21 +33,28 @@ always @(posedge clk) begin
         curr_word <= 0;
         curr_count <= 0;
         ready <= 0;
-        rd_flag <= 0;
+        new_pack <= 0;
     end
     else begin
         if (rd_flag == 1'b0) begin
-        ready <= dna_stream_in[3];              //Last bit for ready state
-        curr_count <= dna_stream_in[2] + 1'b1;         // Last but one bit for data count (plus 1, as binary data presents 1 occurrence of dna data less)
-        curr_word <= dna_stream_in[1:0];        // Remaining bits for dna data (a,c,g,t)
-        rd_flag <= 1;
+            ready <= dna_stream_in[3];              //Last bit for ready state
+            curr_count <= dna_stream_in[2] + 1'b1;         // Last but one bit for data count (plus 1, as binary data presents 1 occurrence of dna data less)
+            curr_word <= dna_stream_in[1:0];        // Remaining bits for dna data (a,c,g,t)
+            rd_flag <= 1;
         end
         if (curr_count == 0) begin
             rd_flag <= 0;
         end
         else begin
-            dna_stream <= curr_word;
-            curr_count <= curr_count - 1'b1;
+            if (ready != 0) begin
+                dna_stream <= curr_word;
+                curr_count <= curr_count - 1'b1;
+            end
+            else begin
+                dna_stream <= 2'bxx;
+                curr_count <= curr_count - 1'b1;
+                new_pack <= 1;
+            end
         end
     end
 end

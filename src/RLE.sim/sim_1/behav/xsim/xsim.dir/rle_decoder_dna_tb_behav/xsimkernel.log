@@ -1,7 +1,7 @@
-Running: xsim.dir/rle_decoder_dna_tb_behav/xsimk.exe -simmode gui -wdb rle_decoder_dna_tb_behav.wdb -simrunnum 0 -socket 64132
+Running: xsim.dir/rle_decoder_dna_tb_behav/xsimk.exe -simmode gui -wdb rle_decoder_dna_tb_behav.wdb -simrunnum 0 -socket 58129
 Design successfully loaded
-Design Loading Memory Usage: 5724 KB (Peak: 5724 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 5680 KB (Peak: 5680 KB)
+Design Loading CPU Usage: 0 ms
 Simulation completed
-Simulation Memory Usage: 14480 KB (Peak: 14480 KB)
-Simulation CPU Usage: 108 ms
+Simulation Memory Usage: 6308 KB (Peak: 6308 KB)
+Simulation CPU Usage: 31 ms
